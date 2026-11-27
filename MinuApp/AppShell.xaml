@@ -4,11 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MinuApp"
-    Title="MinuApp">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.BackgroundColor="#512BD4"
+    Shell.TitleColor="White"
+    Shell.ForegroundColor="White">
 
+    <!-- Esimene leht = avaleht. MainPage asemel nüüd StartPage. -->
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Avaleht"
+        ContentTemplate="{DataTemplate local:StartPage}"
+        Route="StartPage" />
 
 </Shell>
