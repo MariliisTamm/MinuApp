@@ -5,17 +5,16 @@ public class ValgusfoorPage : ContentPage
     // Klassi muutujad, mida kasutame üle terve lehe
     Label statusLabel;
     BoxView redBox, yellowBox, greenBox;
-    bool onSees = false; // Jätab meeles, kas foor on käsitsi sisse lülitatud
+    bool onSees = false; // Jätab meelde, kas foor on käsitsi sisse lülitatud
 
-    // Taimer ja loendur, mis peab järge (0 = punane, 1 = kollane, 2 = roheline)
+    // Taimer ja loendur
     IDispatcherTimer autoTaimer;
     int samm = 0;
 
     public ValgusfoorPage()
     {
-        Title = "Valgusfoor"; // Lehe pealkiri ülemisel ribal
+        Title = "Valgusfoor"; // Lehe pealkiri
 
-        // Pealkiri / olekusilt, mis annab kasutajale juhiseid
         statusLabel = new Label
         {
             Text = "Vali valgus",
@@ -29,7 +28,7 @@ public class ValgusfoorPage : ContentPage
         yellowBox = LooTuli();
         greenBox = LooTuli();
 
-        // Lisame igale tulele puudutuse kuulaja ja vastava teksti
+        // Lisame igale tulele vastava teksti
         LisaKlops(redBox, "STOP");
         LisaKlops(yellowBox, "Ettevaatust");
         LisaKlops(greenBox, "Sõida");
@@ -44,7 +43,7 @@ public class ValgusfoorPage : ContentPage
             Children = { redBox, yellowBox, greenBox }
         };
 
-        // Seadistame taimeri, mis tiksub iga 2 sekundi järel
+        // Seadistame taimeri, mis käivitab iga 2 sekundi järel
         autoTaimer = Dispatcher.CreateTimer();
         autoTaimer.Interval = TimeSpan.FromSeconds(2);
         autoTaimer.Tick += (s, e) => VahetaTuldAutomaatselt(); // Iga 2 sekundi tagant käivitab meetodi
