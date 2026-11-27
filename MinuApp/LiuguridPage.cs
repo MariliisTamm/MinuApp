@@ -10,7 +10,7 @@ public class LiuguridPage : ContentPage
 
     public LiuguridPage()
     {
-        Title = "3.3 Stepper ja Slider";
+        Title = "Stepper ja Slider";
 
         silt = new Label { Text = "Väärtus: 50", FontSize = 20, Padding = 10 };
 

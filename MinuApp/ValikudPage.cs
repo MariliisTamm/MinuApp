@@ -11,7 +11,7 @@ public class ValikudPage : ContentPage
 
     public ValikudPage()
     {
-        Title = "3.2 Valikud";
+        Title = "Valikud";
 
         picker = new Picker
         {

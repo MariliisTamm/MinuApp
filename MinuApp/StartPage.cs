@@ -8,9 +8,9 @@ public class StartPage : ContentPage
         "Kujundid", 
         "Kell", 
         "Valgusfoor", 
-        "3.1 AbsoluteLayout",
-        "3.2 Valikud",
-        "3.3 Stepper ja Slider",
+        "AbsoluteLayout",
+        "Valikud",
+        "Stepper ja Slider",
         "Lumememm",
         "Puu elutsükkel",
         "Jõulukuusk"
