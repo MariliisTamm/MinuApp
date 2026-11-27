@@ -11,7 +11,8 @@ public class StartPage : ContentPage
         "3.1 AbsoluteLayout",
         "3.2 Valikud",
         "3.3 Stepper ja Slider",
-        "Lumememm"
+        "Lumememm",
+        "Puu elutsükkel"
     };
 
     public StartPage()
@@ -52,7 +53,8 @@ public class StartPage : ContentPage
             case 4: return new AbsoluutPage();
             case 5: return new ValikudPage();
             case 6: return new LiuguridPage();
-            default: return new LumememmPage();
+            case 7: return new LumememmPage();
+            default: return new TreePage();
         }
     }
 
