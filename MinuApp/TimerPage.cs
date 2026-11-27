@@ -59,7 +59,7 @@ public class TimerPage : ContentPage
         {
             Padding = 20,
             Spacing = 20,
-            Children = { kell, kuupaev, nupp, StartPage.LooNavigatsioon(Navigation, -1) }
+            Children = { kell, kuupaev, nupp, StartPage.LooNavigatsioon(Navigation, 3) }
         };
     }
 

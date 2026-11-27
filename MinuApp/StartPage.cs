@@ -2,7 +2,7 @@ namespace MinuApp;
 
 public class StartPage : ContentPage
 {
-    List<string> lehenimed = new List<string> { "Tekst", "Kujundid", "Kell" };
+    List<string> lehenimed = new List<string> { "Tekst", "Kujundid", "Kell", "Valgusfoor" };
 
     public StartPage()
     {
@@ -37,7 +37,8 @@ public class StartPage : ContentPage
         {
             case 0: return new TextPage();
             case 1: return new FigurePage();
-            default: return new TimerPage();
+            case 2: return new TimerPage();
+            default: return new ValgusfoorPage();
         }
     }
 
