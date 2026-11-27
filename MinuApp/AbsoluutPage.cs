@@ -10,7 +10,7 @@ public class AbsoluutPage : ContentPage
 
     public AbsoluutPage()
     {
-        Title = "3.1 AbsoluteLayout";
+        Title = "AbsoluteLayout";
         abs = new AbsoluteLayout { BackgroundColor = Color.FromArgb("#F3F0FF") };
 
         // Neli kasti nurkadesse: asukoht 0 = vasak/ülemine serv, 1 = parem/alumine serv
