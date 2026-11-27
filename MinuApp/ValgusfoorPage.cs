@@ -145,19 +145,19 @@ public class ValgusfoorPage : ContentPage
         {
             redBox.Color = Colors.Red;
             statusLabel.Text = "STOP";
-            samm = 1; // Järgmine kord tuleb kollane
+            samm = 1; // Järgmine on kollane
         }
         else if (samm == 1)
         {
             yellowBox.Color = Colors.Yellow;
             statusLabel.Text = "Ettevaatust";
-            samm = 2; // Järgmine kord tuleb roheline
+            samm = 2; // Järgmine on roheline
         }
         else
         {
             greenBox.Color = Colors.Green;
             statusLabel.Text = "Sõida";
-            samm = 0; // Järgmine kord algab tsükkel jälle punasest
+            samm = 0; // Järgmisena algab tsükkel uuesti punasest
         }
     }
 
@@ -203,7 +203,7 @@ public class ValgusfoorPage : ContentPage
         tuli.GestureRecognizers.Add(tap);
     }
 
-    // Kui kasutaja lahkub lehelt, peatame taimeri, et see taustal ei töötaks
+    // Kui kasutaja lahkub lehelt, peatub timer, et see taustal ei töötaks
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
