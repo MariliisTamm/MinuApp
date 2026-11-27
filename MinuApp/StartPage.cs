@@ -12,7 +12,8 @@ public class StartPage : ContentPage
         "3.2 Valikud",
         "3.3 Stepper ja Slider",
         "Lumememm",
-        "Puu elutsükkel"
+        "Puu elutsükkel",
+        "Jõulukuusk"
     };
 
     public StartPage()
@@ -54,7 +55,8 @@ public class StartPage : ContentPage
             case 5: return new ValikudPage();
             case 6: return new LiuguridPage();
             case 7: return new LumememmPage();
-            default: return new TreePage();
+            case 8: return new TreePage();
+            default: return new KuuskPage();
         }
     }
 
