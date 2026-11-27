@@ -120,7 +120,7 @@ public class KuuskPage : ContentPage
             kuuseKonteiner.Children.Add(pall);
         }
 
-        // 1.6 Tuled (7 väikest kollast ringi, alguses peidetud)
+        // Tuled (7 väikest kollast ringi, alguses peidetud)
         double[,] tuleKoordinaadid = {
             { 108, 60 }, { 90, 105 }, { 130, 110 },
             { 70, 165 }, { 110, 160 }, { 145, 170 }, { 105, 215 }
@@ -141,16 +141,15 @@ public class KuuskPage : ContentPage
             kuuseKonteiner.Children.Add(tuli);
         }
 
-        // 1.7 Loovuspunkt: Kingid kuuse all (TapGestureRecognizer)
+        // Loovuspunkt: Kingid kuuse all (TapGestureRecognizer)
         BoxView kink1 = LooKink(Colors.Crimson, "Legokomplekt 🧱", 45, 265);
         BoxView kink2 = LooKink(Colors.RoyalBlue, "Soe talvesall 🧣", 225, 265);
         lava.Children.Add(kink1);
         lava.Children.Add(kink2);
         lava.Children.Add(kuuseKonteiner);
-
-        // ============================================================
+  
         // OSA 2: JUHTPANEEL
-        // ============================================================
+        
         statusLabel = new Label
         {
             Text = "Kuusk ootab ukse taga! Vali 'Pane püsti'.",
@@ -260,9 +259,8 @@ public class KuuskPage : ContentPage
         UuendaTaustaOopaevast();
     }
 
-    // ============================================================
     // OSA 3: TEGEVUSED JA TINGIMUSTE KONTROLL
-    // ============================================================
+
     private async void OnActionClicked(object? sender, EventArgs e)
     {
         if (tegevusPicker.SelectedItem == null)
@@ -383,9 +381,8 @@ public class KuuskPage : ContentPage
                 break;
         }
     }
-    // ============================================================
+
     // OSA 4: ABIMEETODID JA LOOVUSPUNKTID
-    // ============================================================
 
     // Kolmnurga joonistamine okste jaoks
     Polygon LooKolmnurk(double laius, double korgus, Color varv)
