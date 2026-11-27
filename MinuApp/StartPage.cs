@@ -2,7 +2,16 @@ namespace MinuApp;
 
 public class StartPage : ContentPage
 {
-    List<string> lehenimed = new List<string> { "Tekst", "Kujundid", "Kell", "Valgusfoor" };
+    List<string> lehenimed = new List<string> 
+    { 
+        "Tekst", 
+        "Kujundid", 
+        "Kell", 
+        "Valgusfoor", 
+        "3.1 AbsoluteLayout",
+        "3.2 Valikud",
+        "3.3 Stepper ja Slider"
+    };
 
     public StartPage()
     {
@@ -38,7 +47,10 @@ public class StartPage : ContentPage
             case 0: return new TextPage();
             case 1: return new FigurePage();
             case 2: return new TimerPage();
-            default: return new ValgusfoorPage();
+            case 3: return new ValgusfoorPage();
+            case 4: return new AbsoluutPage();
+            case 5: return new ValikudPage();
+            default: return new LiuguridPage();
         }
     }
 
