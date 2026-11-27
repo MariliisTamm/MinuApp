@@ -5,13 +5,13 @@ namespace MinuApp;
 
 public class KuuskPage : ContentPage
 {
-    // --- 1. KUUSE ELEMENDID ---
+    // KUUSE ELEMENDID
     AbsoluteLayout kuuseKonteiner; // Hoiab kõiki kuuse osi koos (saab korraga liigutada ja pöörata)
     Label tahtLabel;
     List<Ellipse> pallid = new List<Ellipse>(); // Nimekiri 6 jõulupallist
     List<Ellipse> tuled = new List<Ellipse>();  // Nimekiri 7 jõulutulest
 
-    // --- 2. JUHTPANEELI ELEMENDID ---
+    // JUHTPANEELI ELEMENDID
     Label statusLabel;
     Picker tegevusPicker;
     Label heledusLabel;
@@ -21,7 +21,7 @@ public class KuuskPage : ContentPage
     DatePicker kuupaevPicker;
     TimePicker kellaaegPicker;
 
-    // --- 3. OLEKU MUUTUJAD (Järjekorra kontrollimiseks) ---
+    // OLEKU MUUTUJAD (Järjekorra kontrollimiseks)
     bool kuuskPysti = false;
     bool kuuskEhitud = false;
     Random rnd = new Random();
@@ -38,9 +38,8 @@ public class KuuskPage : ContentPage
             Spacing = 12
         };
 
-        // ============================================================
         // OSA 1: KUUSE JOONISTAMINE (AbsoluteLayout)
-        // ============================================================
+        
         AbsoluteLayout lava = new AbsoluteLayout
         {
             HeightRequest = 310,
@@ -59,17 +58,17 @@ public class KuuskPage : ContentPage
         AbsoluteLayout.SetLayoutBounds(kuuseKonteiner, new Rect(0.5, 0.0, 220, 280));
         AbsoluteLayout.SetLayoutFlags(kuuseKonteiner, AbsoluteLayoutFlags.XProportional);
 
-        // 1.1 Jalg (lai ja madal punane BoxView kuuse all)
+        // Jalg (lai ja madal punane BoxView kuuse all)
         BoxView jalg = new BoxView { Color = Colors.DarkRed, CornerRadius = 4 };
         AbsoluteLayout.SetLayoutBounds(jalg, new Rect(0.5, 260, 80, 18));
         AbsoluteLayout.SetLayoutFlags(jalg, AbsoluteLayoutFlags.XProportional);
 
-        // 1.2 Tüvi (lühike pruun BoxView)
+        // Tüvi (lühike pruun BoxView)
         BoxView tyvi = new BoxView { Color = Colors.SaddleBrown };
         AbsoluteLayout.SetLayoutBounds(tyvi, new Rect(0.5, 230, 26, 32));
         AbsoluteLayout.SetLayoutFlags(tyvi, AbsoluteLayoutFlags.XProportional);
 
-        // 1.3 Okstik (3 rohelist kolmnurka üksteise peal, alumine kõige laiem)
+        // Okstik (3 rohelist kolmnurka üksteise peal, alumine kõige laiem)
         Polygon alumineOks = LooKolmnurk(200, 100, Colors.DarkGreen);
         AbsoluteLayout.SetLayoutBounds(alumineOks, new Rect(0.5, 135, 200, 100));
         AbsoluteLayout.SetLayoutFlags(alumineOks, AbsoluteLayoutFlags.XProportional);
@@ -82,7 +81,7 @@ public class KuuskPage : ContentPage
         AbsoluteLayout.SetLayoutBounds(ylemineOks, new Rect(0.5, 30, 120, 80));
         AbsoluteLayout.SetLayoutFlags(ylemineOks, AbsoluteLayoutFlags.XProportional);
 
-        // 1.4 Täht tipus (alguses peidetud, süttib ehtimise lõpus)
+        // Täht tipus (alguses peidetud, süttib ehtimise lõpus)
         tahtLabel = new Label
         {
             Text = "⭐",
@@ -101,7 +100,7 @@ public class KuuskPage : ContentPage
         kuuseKonteiner.Children.Add(ylemineOks);
         kuuseKonteiner.Children.Add(tahtLabel);
 
-        // 1.5 Jõulupallid (6 tk, alguses peidetud)
+        // Jõulupallid (6 tk, alguses peidetud)
         double[,] palliKoordinaadid = {
             { 95, 75 }, { 125, 85 },
             { 75, 130 }, { 140, 135 },
