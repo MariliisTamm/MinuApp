@@ -10,7 +10,8 @@ public class StartPage : ContentPage
         "Valgusfoor", 
         "3.1 AbsoluteLayout",
         "3.2 Valikud",
-        "3.3 Stepper ja Slider"
+        "3.3 Stepper ja Slider",
+        "Lumememm"
     };
 
     public StartPage()
@@ -50,7 +51,8 @@ public class StartPage : ContentPage
             case 3: return new ValgusfoorPage();
             case 4: return new AbsoluutPage();
             case 5: return new ValikudPage();
-            default: return new LiuguridPage();
+            case 6: return new LiuguridPage();
+            default: return new LumememmPage();
         }
     }
 
